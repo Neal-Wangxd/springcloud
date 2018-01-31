@@ -22,7 +22,7 @@ import com.microcloud.provider.service.DeptService;
 * 创建时间：2018年1月17日 下午5:03:55 
 * 类说明 
 */
-@SpringBootTest(classes = StartSpringCloudtMain.class)
+@SpringBootTest(classes = StartSpringCloudProviderMain.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 public class TestDept {

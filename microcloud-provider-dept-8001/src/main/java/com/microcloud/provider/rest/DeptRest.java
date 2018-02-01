@@ -1,6 +1,7 @@
 package com.microcloud.provider.rest;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,6 +38,11 @@ public class DeptRest {
 	@RequestMapping(value="/dept/list")
 	public Object list(){
 		return this.deptService.findAll();
+	}
+	
+	@RequestMapping(value="/dept/sessionId")
+	public Object id(HttpServletRequest request ){
+		return request.getSession().getId();
 	}
 
 }

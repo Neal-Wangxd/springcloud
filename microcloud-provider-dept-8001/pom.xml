@@ -16,12 +16,15 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-  		
+  
+  		<dependency>
+  			<groupId>springcloud-security</groupId>
+  			<artifactId>microcloud-security</artifactId>
+  		</dependency>
   		
   		<dependency>
   			<groupId>microcloud-api</groupId>
   			<artifactId>microcloud-api</artifactId>
-		    <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>

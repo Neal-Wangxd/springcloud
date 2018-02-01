@@ -22,12 +22,12 @@ mybatis:
   mapper-locations:
   - classpath:mybatis/mapper/*.xml                  #所有的mapper映射文件
   
-security:
-  basic:
-    enabled: true                                   #启用springsecurity安全配置项
-  user:
-    name: springcloud                               #认证用户名
-    password: 123                                   #认证用户密码
-    role:                                           #用户角色
-    - USER
-  sessions: STATELESS                                  #session信息配置  ALWAYS（总是保存）   STATELESS（不保存，最好设置为不保存）
+#security:
+#  basic:
+#    enabled: true                                   #启用springsecurity安全配置项
+#  user:
+#    name: springcloud                               #认证用户名
+#    password: 123                                   #认证用户密码
+#    role:                                           #用户角色
+#    - USER
+#  sessions: STATELESS                                  #session信息配置  ALWAYS（总是保存）   STATELESS（不保存，最好设置为不保存）

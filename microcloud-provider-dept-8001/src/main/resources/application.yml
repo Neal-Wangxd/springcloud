@@ -30,3 +30,4 @@ security:
     password: 123                                   #认证用户密码
     role:                                           #用户角色
     - USER
+  sessions: STATELESS                                  #session信息配置  ALWAYS（总是保存）   STATELESS（不保存，最好设置为不保存）

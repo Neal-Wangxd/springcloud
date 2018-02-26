@@ -84,5 +84,6 @@
     <module>microcloud-provider-dept-8001</module>
     <module>microcloud-consumer-80</module>
     <module>microcloud-security</module>
+    <module>microcloud-eureka-7001</module>
   </modules>
 </project>

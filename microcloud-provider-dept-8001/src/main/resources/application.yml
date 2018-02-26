@@ -2,6 +2,8 @@ server:
   port: 8001
   context-path: /springcloud-provider
 spring:
+  application:
+    name: springcloud-provider-dept-8001
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    #配置当前要使用的数据源的操作类型
     driver-class-name: com.mysql.jdbc.Driver        #配置mysql的驱动程序类
@@ -31,3 +33,18 @@ mybatis:
 #    role:                                           #用户角色
 #    - USER
 #  sessions: STATELESS                                  #session信息配置  ALWAYS（总是保存）   STATELESS（不保存，最好设置为不保存）
+
+
+eureka:
+  client: #客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+    
+info:
+  app.name: springcloud
+  company.name: www.dept.8001.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

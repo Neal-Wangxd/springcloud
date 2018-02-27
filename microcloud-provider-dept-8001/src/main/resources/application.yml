@@ -38,7 +38,7 @@ mybatis:
 eureka:
   client: #客户端进行Eureka注册的配置
     service-url:
-      defaultZone: http://localhost:7001/eureka/
+      defaultZone: http://springcloud:123@localhost:7001/eureka/
   instance:
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 5 #若超过5秒表示服务已经宕机了（默认是90秒）

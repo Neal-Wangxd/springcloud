@@ -21,3 +21,12 @@ info:
   company.name: www.eureka.7001.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+  
+  
+  
+security:
+  basic:
+    enabled: true #启用安全认证处理
+  user:
+    name: springcloud #用户名
+    password: 123 #密码

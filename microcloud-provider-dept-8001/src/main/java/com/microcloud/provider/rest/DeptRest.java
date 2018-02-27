@@ -3,6 +3,7 @@ package com.microcloud.provider.rest;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,15 @@ import com.microcloud.provider.service.DeptService;
 
 @RestController
 public class DeptRest {
+	
+	@Resource
+	private DiscoveryClient client; //进行Eureka的发现服务
+	
+	@RequestMapping("/dept/discover") 
+	public Object discover(){ //直接返回发现服务信息
+		return this.client;
+	}
+	
 	
 	@Resource
 	private DeptService deptService;

@@ -7,15 +7,15 @@ spring:
 
 eureka:
   server:
-    enable-self-preservation: false #表示关闭保护模式
+    enable-self-preservation: true #表示关闭保护模式
     eviction-interval-timer-in-ms: 1000 #设置清理时间间隔，这个时间是毫秒（默认是60秒）
   instance:  #eureka实例定义
-    hostname: localhost #定义eureka实例所在的主机名称 
+    hostname: localhost-7001 #定义eureka实例所在的主机名称 
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    register-with-eureka: false #当前的服务不注册到eureka之中
-    fetch-registry: false #不通过eureka获取注册信息
+      defaultZone: http://springcloud:123@localhost:7002/eureka/,http://springcloud:123@localhost:7003/eureka/
+    register-with-eureka: true #当前的服务不注册到eureka之中
+    fetch-registry: true #不通过eureka获取注册信息
 info: 
   app.name: springcloud
   company.name: www.eureka.7001.com

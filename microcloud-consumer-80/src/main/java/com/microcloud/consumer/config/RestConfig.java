@@ -3,6 +3,7 @@ package com.microcloud.consumer.config;
 import java.nio.charset.Charset;
 import java.util.Base64;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -20,6 +21,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestConfig {
 
 	@Bean
+	@LoadBalanced
 	public RestTemplate getRestTemplate(){
 		return new RestTemplate();
 	}

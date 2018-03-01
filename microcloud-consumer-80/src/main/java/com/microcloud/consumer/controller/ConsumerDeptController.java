@@ -23,9 +23,13 @@ import com.microcloud.api.bean.Dept;
 @RestController
 public class ConsumerDeptController {
 	
-	public static final String DEPT_GET_URL ="http://localhost:8001/springcloud-provider/dept/get/";
-	public static final String DEPT_LIST_URL ="http://localhost:8001/springcloud-provider/dept/list/";
-	public static final String DEPT_ADD_URL ="http://localhost:8001/springcloud-provider/dept/add";
+	//public static final String DEPT_GET_URL ="http://localhost:8001/springcloud-provider/dept/get/";
+	//public static final String DEPT_LIST_URL ="http://localhost:8001/springcloud-provider/dept/list/";
+	//public static final String DEPT_ADD_URL ="http://localhost:8001/springcloud-provider/dept/add";
+	
+	public static final String DEPT_GET_URL ="http://SPRINGCLOUD-PROVIDER-DEPT/dept/get/";
+	public static final String DEPT_LIST_URL ="http://SPRINGCLOUD-PROVIDER-DEPT/dept/list/";
+	public static final String DEPT_ADD_URL ="http://SPRINGCLOUD-PROVIDER-DEPT/dept/add";
 	
 	@Resource
 	private RestTemplate restTemplate;

@@ -2,6 +2,7 @@ package com.microcloud.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /** 
 * @author 作者 wxd  
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 * 类说明 
 */
 @SpringBootApplication
+@EnableEurekaClient
 public class StartSpringCloudConsumerMain {
     public static void main(String[] args) {
         SpringApplication.run(StartSpringCloudConsumerMain.class, args);

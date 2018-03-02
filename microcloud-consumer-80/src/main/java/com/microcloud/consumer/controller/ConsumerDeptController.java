@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -36,6 +38,23 @@ public class ConsumerDeptController {
 	
 	@Resource
 	private HttpHeaders headers;
+	
+	@Resource
+	private LoadBalancerClient loadBalancerClient;
+	
+	
+	@RequestMapping(value="/deptRibbon/get")
+	public Object getDeptRibbon(long id){
+		
+		ServiceInstance serviceInstance = this.loadBalancerClient.choose("SPRINGCLOUD-PROVIDER-DEPT");
+		System.out.println("【******  ServiceInstance  ******】 host = "+serviceInstance.getHost()
+						+",port = "+ serviceInstance.getPort() 
+						+", serviceId = "+serviceInstance.getServiceId());
+		Dept dept = this.restTemplate.exchange(DEPT_GET_URL+id, 
+				HttpMethod.GET,new HttpEntity<Object>(this.headers),
+				Dept.class).getBody();
+		return dept;
+	}
 	
 	@RequestMapping(value="/dept/get")
 	public Object getDept(long id){

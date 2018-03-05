@@ -105,5 +105,7 @@
     <module>microcloud-eureka-server</module>
     <module>microcloud-provider-dept-8002</module>
     <module>microcloud-provider-dept-8003</module>
+    <module>microcloud-consumer-feign</module>
+    <module>microcloud-service</module>
   </modules>
 </project>

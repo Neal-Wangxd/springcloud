@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.microcloud.consumer.StartSpringCloudConsumerMain</config>
+		<config>java:com.microcloud.StartSpringCloudConsumerMain</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
